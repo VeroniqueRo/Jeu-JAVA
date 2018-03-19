@@ -38,4 +38,54 @@ public class Guerrier extends Personnage
 
     }
 
+    //*************   ACCESSEURS *************
+
+    // Retourne le nom du guerrier
+    public String getNom() {
+        return nom;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public String getNiveauVie() {
+        return niveauVie;
+    }
+
+    public String getArme() {
+        return arme;
+    }
+
+    public String getBouclier() {
+        return bouclier;
+    }
+
+    //*************   MUTATEURS *************
+
+    public void setNom(String pNom)
+    {
+        nom = pNom;
+    }
+
+    public void setImage(String pImage)
+    {
+        image = pImage;
+    }
+
+    public void setNiveauVie(String pNiveauVie)
+    {
+        niveauVie = pNiveauVie;
+    }
+
+    public void setArme(String pArme)
+    {
+        arme = pArme;
+    }
+
+    public void setBouclier(String pBouclier)
+    {
+        bouclier = pBouclier;
+    }
+
 }
