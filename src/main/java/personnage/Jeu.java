@@ -9,8 +9,19 @@ public class Jeu {
     Scanner sc = new Scanner(System.in);
     System.out.println("Choisir votre personnage :\n1 pour Guerrier \n2 pour Magicien");
     String str = sc.nextLine();
+    // System.out.println("Vous avez saisi : " + str); 
+
+    // Permet d'afficher le nom du personnage choisi
+    if (str.equals("1")) {
+        System.out.println("Vous avez choisi de créer un guerrier"); 
+    } 
     
-    System.out.println("Vous avez saisi : " + str); 
+    if (str.equals("2")) {
+        System.out.println("Vous avez choisi de créer un magicien"); 
+    }
+
+    
+    
     //Tableau contenant les personnages, tableau d'objets Personnage
     Personnage personnages[] = new Personnage[10];
     int nbPerso = 0;
@@ -23,12 +34,12 @@ public class Jeu {
             personnages[nbPerso]=guerrier;
             //Incrémente le nombre de personnage dans le tableau
             nbPerso++;
-
+            
             //************************ Donner un nom au personnage ****************************************
             System.out.println("Donnez-lui un nom ?");
             String nomPerso = sc.nextLine();
             guerrier.setNom(nomPerso); // Attribuer le nom donné par l'utilisateur au Guerrier créé
-
+            
             //************************ Donner une image au personnage ****************************************
             System.out.println("Quelle image souhaitez-vous ?");
             String nomImage = sc.nextLine();
