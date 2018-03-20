@@ -56,7 +56,9 @@ public class Jeu {
 
             //Afficher les infos du personnage créé
             // System.out.println(guerrier.getBouclier());// Permet de récupérer le
+            System.out.println("************************************" + "\nVotre guerrier " + nomPerso + " a été créé" + "\navec les caractéristiques suivantes :" + "\n ");
             System.out.println(guerrier);
+            System.out.println("************************************");
         
         }
         
@@ -100,7 +102,9 @@ public class Jeu {
             magicien.setPhiltre(nomPhiltre);// Attribuer un philtre au nouveau personnage créé
 
             //Afficher les infos du personnage créé
+            System.out.println("************************************" + "\nVotre magicien " + nomPerso + " a été créé"+"\navec les caractéristiques suivantes :" + "\n ");
             System.out.println(magicien);
+            System.out.println("************************************");
         
         }
     
