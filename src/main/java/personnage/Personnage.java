@@ -53,7 +53,7 @@ public abstract class Personnage
     // Méthode toString : Affiche les informations d'un objet
     public String toString()
     {
-        return "Nom : "+nom+ "\nImage :" + image + "\nNiveau de vie : " + niveauVie + "\nForce Attaque : " + forceAttaque;
+        return "Nom : "+ nom + "\nImage : " + image + "\nNiveau de vie : " + niveauVie + "\nForce Attaque : " + forceAttaque;
     }
     
 

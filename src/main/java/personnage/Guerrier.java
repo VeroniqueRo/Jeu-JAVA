@@ -58,7 +58,7 @@ public class Guerrier extends Personnage
     // Méthode toString : Affiche les informations d'un objet
     public String toString()
     {
-        return super.toString() + "\nArme :" + arme + "\nBouclier : " + bouclier;
+        return super.toString() + "\nArme : " + arme + "\nBouclier : " + bouclier;
     }
 
 }
