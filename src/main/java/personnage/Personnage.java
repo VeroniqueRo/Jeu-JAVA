@@ -27,27 +27,26 @@ public abstract class Personnage
         return forceAttaque;
     }
 
-
     //*************   MUTATEURS *************
 
     public void setNom(String pNom)
     {
-        nom = pNom;
+        this.nom = pNom;
     }
 
     public void setImage(String pImage)
     {
-        image = pImage;
+        this.image = pImage;
     }
 
     public void setNiveauVie(int pNiveauVie)
     {
-        niveauVie = pNiveauVie;
+        this.niveauVie = pNiveauVie;
     }
 
     public void setForceAttaque(int pForceAttaque)
     {
-        forceAttaque = pForceAttaque;
+        this.forceAttaque = pForceAttaque;
     }
 
     // Méthode toString : Affiche les informations d'un objet
@@ -55,6 +54,4 @@ public abstract class Personnage
     {
         return "Nom : "+ nom + "\nImage : " + image + "\nNiveau de vie : " + niveauVie + "\nForce Attaque : " + forceAttaque;
     }
-    
-
 }

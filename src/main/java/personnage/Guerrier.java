@@ -47,12 +47,12 @@ public class Guerrier extends Personnage
 
     public void setArme(String pArme)
     {
-        arme = pArme;
+        this.arme = pArme;
     }
 
     public void setBouclier(int pBouclier)
     {
-        bouclier = pBouclier;
+        this.bouclier = pBouclier;
     }
 
     // Méthode toString : Affiche les informations d'un objet
@@ -60,5 +60,4 @@ public class Guerrier extends Personnage
     {
         return super.toString() + "\nArme : " + arme + "\nBouclier : " + bouclier;
     }
-
 }
