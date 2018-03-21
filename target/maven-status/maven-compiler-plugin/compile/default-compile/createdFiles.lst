@@ -1,4 +1,5 @@
 personnage\Personnage.class
 personnage\Guerrier.class
+personnage\Saisie.class
 personnage\Magicien.class
 personnage\Jeu.class
