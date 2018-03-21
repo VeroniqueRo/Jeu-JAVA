@@ -87,7 +87,7 @@ public class Saisie {
         return nomBouclier;
     } 
 
-// METHODES SPECIALES POUR LES MAGICIENS
+    // METHODES SPECIALES POUR LES MAGICIENS
 
     //************************ Méthode pour donner un sort au personnage ****************************************
     public static String creationSort() {

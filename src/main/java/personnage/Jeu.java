@@ -19,13 +19,14 @@ public class Jeu {
         // Permet d'afficher le nom du personnage choisi
         if (str.equals("1")) {
             System.out.println("Vous avez choisi de créer un guerrier");
-            CreateWarrior();
+            CreateWarrior();        
         }
 
         if (str.equals("2")) {
             System.out.println("Vous avez choisi de créer un magicien");
             CreateMagic();
         }
+
     } 
      
     //Methode pour créer un guerrier
@@ -52,26 +53,19 @@ public class Jeu {
 
           //************************ Donner un niveau de vie au personnage ****************************************
           System.out.println("Quelle niveau de vie (entre 0 et 100) souhaitez-vous donner à votre guerrier ?");
-          int nomNiveauVie = sc.nextInt();
           guerrier1.setNiveauVie(Saisie.creationNiveauVie()); // Appelle la méthode dans la classe Saisie pour attribuer un niveau de vie au nouveau personnage créé
 
           //************************ Donner une force d'attaque au personnage ****************************************
           System.out.println("Quelle force d'attaque souhaitez-vous donner à votre guerrier ?");
-          int nomForceAttaque = sc.nextInt();
           guerrier1.setForceAttaque(Saisie.creationForceAttaque()); // Appelle la méthode dans la classe Saisie pour attribuer une force d'attaque au nouveau personnage créé
 
           //************************ Donner un bouclier au personnage ****************************************
           System.out.println("Quelle force souhaitez-vous donner au bouclier de votre guerrier ?");
-          int nomBouclier = sc.nextInt();
           guerrier1.setBouclier(Saisie.creationBouclier()); // Appelle la méthode dans la classe Saisie pour attribuer un bouclier au nouveau personnage créé
           
-          //Afficher les infos du personnage créé
-        //   System.out.println(guerrier1.getBouclier());// Permet de récupérer le nom du bouclier
-          //System.out.println("************************************\nVotre guerrier " + nomPerso + " a été créé\navec les caractéristiques suivantes: \n ");
-          System.out.println("Votre guerrier est créé");
-          System.out.println(guerrier1);// Appelle la méthode toString identique à : System.out.println(guerrier1.toString());
-          System.out.println("************************************");
-
+          //Affiche le nom du personnage créé avec le message "personnage créé"
+          System.out.println("Votre guerrier "+ guerrier1.getNom() + " est créé");
+          System.out.println(guerrier1);
     }
 
     //Methode pour créer un magicien
@@ -108,10 +102,9 @@ public class Jeu {
          System.out.println("Quelle force souhaitez-vous donner au philtre de votre magicien ?");
          magicien1.setPhiltre(Saisie.creationPhiltre()); // Attribuer un philtre au nouveau personnage créé
 
-         //Afficher les infos du personnage créé
-        //  System.out.println("************************************\n Votre magicien " + nomMage + " a été créé \navec les caractéristiques suivantes :  \n ");
+         //Affiche le nom du personnage créé avec le message "personnage créé"
+         System.out.println("Votre magicien"+ magicien1.getNom() + " est créé");
          System.out.println(magicien1);
-         System.out.println("************************************");
     }
 
 }
