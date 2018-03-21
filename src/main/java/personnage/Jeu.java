@@ -86,84 +86,30 @@ public class Jeu {
 
          //************************ Donner un nom au personnage ****************************************
          System.out.println("Donnez-lui un nom ?");
-         String nomMage = sc.nextLine();
-         magicien1.setNom(nomMage); // Attribuer le nom donné par l'utilisateur au magicien créé
-
-             // Condition : Pour forcer à entrer au moins un caractère
-             while (nomMage.equals("")) {
-
-                 System.out.println("Le nom est indispensable.\nQuel nom souhaitez-vous donner à votre magicien ?");
-                 nomMage = sc.nextLine();
-                 magicien1.setNom(nomMage);
-             }
+         magicien1.setNom(Saisie.creationNom()); // Attribuer le nom donné par l'utilisateur au magicien créé
 
          //************************ Donner une image au personnage ****************************************
          System.out.println("Quelle image souhaitez-vous ?");
-         String imageMage = sc.nextLine();
-         magicien1.setImage(imageMage); // Attribuer une image donnée par l'utilisateur au magicien créé
-
-             // Condition : Pour forcer à entrer au moins un caractère
-             while (imageMage.equals("")) {
-
-                 System.out.println("Une image est indispensable.\nQuelle image souhaitez-vous pour votre magicien ?");
-                 imageMage = sc.nextLine();
-                 magicien1.setImage(imageMage);
-             }
+         magicien1.setImage(Saisie.creationImage()); // Attribuer une image donnée par l'utilisateur au magicien créé
 
          //************************ Donner une arme au personnage ****************************************
          System.out.println("Quelle sort souhaitez-vous lui attribuer ?");
-         String sortMage = sc.nextLine();
-         magicien1.setSort(sortMage); // Attribuer le nom de l'arme donnée par l'utilisateur au magicien créé
-
-             // Condition : Pour forcer à entrer au moins un caractère
-             while (sortMage.equals("")) {
-
-                 System.out.println("Un sort est indispensable.\nQuel sort souhaitez-vous pour votre magicien ?");
-                 sortMage = sc.nextLine();
-                 magicien1.setSort(sortMage);
-             }
+         magicien1.setSort(Saisie.creationSort()); // Attribuer le nom de l'arme donnée par l'utilisateur au magicien créé
 
          //************************ Donner un niveau de vie au personnage ****************************************
          System.out.println("Quelle niveau de vie (entre 0 et 100) souhaitez-vous donner à votre magicien ?");
-         int niveauVieMage = sc.nextInt();
-         magicien1.setNiveauVie(niveauVieMage); // Attribuer un niveau de vie au nouveau personnage créé
-
-             // Condition pour limiter l'entrée à un chiffre entre 0 et 100
-             while (niveauVieMage < 0 || niveauVieMage > 100) {
-
-                 System.out.println("Un niveau de vie entre 0 et 100 est indispensable.\nQuel niveau de vie souhaitez-vous pour votre magicien ?");
-                 niveauVieMage = sc.nextInt();
-                 magicien1.setNiveauVie(niveauVieMage);
-             }
+         magicien1.setNiveauVie(Saisie.creationNiveauVie()); // Attribuer un niveau de vie au nouveau personnage créé
 
          //************************ Donner une force d'attaque au personnage ****************************************
          System.out.println("Quelle force d'attaque (entre 0 et 200) souhaitez-vous donner à votre magicien ?");
-         int forceAttaqueMage = sc.nextInt();
-         magicien1.setForceAttaque(forceAttaqueMage); // Attribuer une force d'attaque au nouveau personnage créé
-
-             // Condition pour limiter l'entrée à un chiffre entre 0 et 200
-             while (forceAttaqueMage < 0 || forceAttaqueMage > 100) {
-
-                 System.out.println("Une force d'attaque entre 0 et 200 est indispensable.\nQuel force d'attaque souhaitez-vous pour votre magicien ?");
-                 forceAttaqueMage = sc.nextInt();
-                 magicien1.setForceAttaque(forceAttaqueMage);
-             }
+         magicien1.setForceAttaque(Saisie.creationForceAttaque()); // Attribuer une force d'attaque au nouveau personnage créé
 
          //************************ Donner un philtre au personnage ****************************************
          System.out.println("Quelle force souhaitez-vous donner au philtre de votre magicien ?");
-         int philtreMage = sc.nextInt();
-         magicien1.setPhiltre(philtreMage); // Attribuer un philtre au nouveau personnage créé
-
-             // Condition pour limiter l'entrée à un chiffre entre 0 et 200
-             while (philtreMage < 0 || philtreMage > 200) {
-
-                 System.out.println("Une force entre 0 et 200 est indispensable pour le philtre.\nQuel force souhaitez-vous pour le philtre de votre magicien ?");
-                 philtreMage = sc.nextInt();
-                 magicien1.setPhiltre(philtreMage);
-             }
+         magicien1.setPhiltre(Saisie.creationPhiltre()); // Attribuer un philtre au nouveau personnage créé
 
          //Afficher les infos du personnage créé
-         System.out.println("************************************\n Votre magicien " + nomMage + " a été créé \navec les caractéristiques suivantes :  \n ");
+        //  System.out.println("************************************\n Votre magicien " + nomMage + " a été créé \navec les caractéristiques suivantes :  \n ");
          System.out.println(magicien1);
          System.out.println("************************************");
     }

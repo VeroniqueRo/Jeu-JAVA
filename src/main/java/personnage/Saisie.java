@@ -6,16 +6,18 @@ public class Saisie {
 
     private static Scanner sc = new Scanner(System.in);
 
+// METHODES POUR TOUS LES PERSONNAGES
+
     //************************ Méthode pour donner un nom au personnage ****************************************
     public static String creationNom() {
         
-        String nomP = sc.nextLine();
+        String nomPerso = sc.nextLine();
         // Condition : Pour forcer à entrer au moins un caractère
-        while (nomP.equals("")) {
+        while (nomPerso.equals("")) {
             System.out.println("Le nom est indispensable.\nQuel nom souhaitez-vous donner à votre personnage ?");
-            nomP = sc.nextLine();
+            nomPerso = sc.nextLine();
         }
-        return nomP;
+        return nomPerso;
     }
 
     //************************ Méthode pour donner une image au personnage ****************************************
@@ -29,19 +31,6 @@ public class Saisie {
             nomImage = sc.nextLine();               
         }
         return nomImage;
-    }
-
-    //************************ Méthode pour donner une arme au personnage ****************************************
-    public static String creationArme() {
-
-        String nomArme = sc.nextLine();
-        // Condition : Pour forcer à entrer au moins un caractère
-        while (nomArme.equals("")) {
-
-            System.out.println("Une arme est indispensable");
-            nomArme = sc.nextLine();
-        }
-        return nomArme;
     }
 
     //************************ Donner un niveau de vie au personnage ****************************************
@@ -70,9 +59,24 @@ public class Saisie {
         return nomForceAttaque;
     }
     
+// METHODES SPECIALES POUR LES GUERRIERS
+
+    //************************ Méthode pour donner une arme au personnage ****************************************
+    public static String creationArme() {
+
+        String nomArme = sc.nextLine();
+        // Condition : Pour forcer à entrer au moins un caractère
+        while (nomArme.equals("")) {
+
+            System.out.println("Une arme est indispensable");
+            nomArme = sc.nextLine();
+        }
+        return nomArme;
+    }
+
     //************************ Donner un bouclier au personnage ****************************************
     public static Integer creationBouclier() {
-        
+
         int nomBouclier = sc.nextInt();
         // Condition pour limiter l'entrée à un chiffre entre 0 et 200
         while (nomBouclier < 0 || nomBouclier > 200) {
@@ -82,6 +86,35 @@ public class Saisie {
         }
         return nomBouclier;
     } 
+
+// METHODES SPECIALES POUR LES MAGICIENS
+
+    //************************ Méthode pour donner un sort au personnage ****************************************
+    public static String creationSort() {
+
+        String nomSort = sc.nextLine();
+        // Condition : Pour forcer à entrer au moins un caractère
+        while (nomSort.equals("")) {
+
+            System.out.println("Un sort est indispensable");
+            nomSort = sc.nextLine();
+        }
+        return nomSort;
+    }
+
+    //************************ Donner un philtre au personnage ****************************************
+    public static Integer creationPhiltre() {
+
+        int philtreMage = sc.nextInt();
+        // Condition pour limiter l'entrée à un chiffre entre 0 et 200
+        while (philtreMage < 0 || philtreMage > 200) {
+
+            System.out.println("Une force entre 0 et 200 est indispensable pour le philtre.\nQuel force souhaitez-vous pour le philtre de votre magicien ?");
+            philtreMage = sc.nextInt();
+        }
+        return philtreMage;
+    }
+             
 
 }
 
