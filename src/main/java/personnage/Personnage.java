@@ -3,10 +3,10 @@ package personnage;
 public abstract class Personnage
 {
         // Stocke les variables de notre guerrier
-    private String nom;
-    private String image;
-    private int niveauVie;
-    private int forceAttaque;
+    protected String nom;
+    protected String image;
+    protected int niveauVie;
+    protected int forceAttaque;
 
        //*************   ACCESSEURS *************
 

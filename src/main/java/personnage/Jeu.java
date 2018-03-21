@@ -19,20 +19,13 @@ public class Jeu {
         // Permet d'afficher le nom du personnage choisi
         if (str.equals("1")) {
             System.out.println("Vous avez choisi de créer un guerrier");
-          
+            CreateWarrior();
         }
 
         if (str.equals("2")) {
             System.out.println("Vous avez choisi de créer un magicien");
+            CreateMagic();
         }
-      
-            if (str.equals("1")) {
-                CreateWarrior();
-            }
-
-            if (str.equals("2")) {
-                CreateMagic();
-            }
     }
 
      //Methode pour créer un guerrier
@@ -201,10 +194,10 @@ public class Jeu {
               }
 
           //Afficher les infos du personnage créé
-          // System.out.println(guerrier.getBouclier());// Permet de récupérer le
+          System.out.println(guerrier1.getBouclier());// Permet de récupérer le nom du bouclier
           //System.out.println("************************************\nVotre guerrier " + nomPerso + " a été créé\navec les caractéristiques suivantes: \n ");
           System.out.println("Votre guerrier est créé");
-          System.out.println(guerrier1);
+          System.out.println(guerrier1.toString());
           System.out.println("************************************");
 
     }

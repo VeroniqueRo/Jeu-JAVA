@@ -23,12 +23,12 @@ public class Magicien extends Personnage
 
     public void setSort(String pSort)
     {
-        sort = pSort;
+        this.sort = pSort;
     }
 
     public void setPhiltre(int pPhiltre)
     {
-        philtre = pPhiltre;
+        this.philtre = pPhiltre;
     }
 
     // Méthode toString : Affiche les informations d'un objet
