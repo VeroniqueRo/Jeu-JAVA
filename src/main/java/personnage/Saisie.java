@@ -10,7 +10,7 @@ public class Saisie {
 
     //************************ Méthode pour donner un nom au personnage ****************************************
     public static String creationNom() {
-        
+
         String nomPerso = sc.nextLine();
         // Condition : Pour forcer à entrer au moins un caractère
         while (nomPerso.equals("")) {
@@ -28,7 +28,7 @@ public class Saisie {
         while (nomImage.equals("")) {
 
             System.out.println("Une image est indispensable.\nQuelle image souhaitez-vous pour votre personnage ?");
-            nomImage = sc.nextLine();               
+            nomImage = sc.nextLine();
         }
         return nomImage;
     }
@@ -37,11 +37,13 @@ public class Saisie {
     public static Integer creationNiveauVie() {
 
         int nomNiveauVie = sc.nextInt();
+        sc.nextLine();
         // Condition pour limiter l'entrée à un chiffre entre 0 et 100
         while (nomNiveauVie < 0 || nomNiveauVie > 100) {
 
             System.out.println("Un niveau de vie entre 0 et 100 est indispensable.\nQuel niveau choisissez-vous ?");
             nomNiveauVie = sc.nextInt();
+            sc.nextLine();
         }
         return nomNiveauVie;
     }
@@ -50,15 +52,17 @@ public class Saisie {
     public static Integer creationForceAttaque() {
 
         int nomForceAttaque = sc.nextInt();
+        sc.nextLine();
         // Condition pour limiter l'entrée à un chiffre entre 0 et 200
         while (nomForceAttaque < 0 || nomForceAttaque > 200) {
 
             System.out.println("Une force d'attaque entre 0 et 200 est indispensable.\nQuel force choisissez-vous ?");
             nomForceAttaque = sc.nextInt();
+            sc.nextLine();
         }
         return nomForceAttaque;
     }
-    
+
 // METHODES SPECIALES POUR LES GUERRIERS
 
     //************************ Méthode pour donner une arme au personnage ****************************************
@@ -78,14 +82,16 @@ public class Saisie {
     public static Integer creationBouclier() {
 
         int nomBouclier = sc.nextInt();
+        sc.nextLine();
         // Condition pour limiter l'entrée à un chiffre entre 0 et 200
         while (nomBouclier < 0 || nomBouclier > 200) {
 
             System.out.println("Une force de bouclier entre 0 et 200 est indispensable.\nQuelle force de bouclier choisissez-vous ?");
             nomBouclier = sc.nextInt();
+            sc.nextLine();
         }
         return nomBouclier;
-    } 
+    }
 
     // METHODES SPECIALES POUR LES MAGICIENS
 
@@ -106,15 +112,17 @@ public class Saisie {
     public static Integer creationPhiltre() {
 
         int philtreMage = sc.nextInt();
+        sc.nextLine();
         // Condition pour limiter l'entrée à un chiffre entre 0 et 200
         while (philtreMage < 0 || philtreMage > 200) {
 
             System.out.println("Une force entre 0 et 200 est indispensable pour le philtre.\nQuel force souhaitez-vous pour le philtre de votre magicien ?");
             philtreMage = sc.nextInt();
+            sc.nextLine();
         }
         return philtreMage;
     }
-             
+
 
 }
 
