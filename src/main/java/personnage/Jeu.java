@@ -10,24 +10,39 @@ public class Jeu {
 
     public static void main(String[] args) {
 
-        System.out.println("Bienvenue dans le jeu !");        
+        Boolean creation = true;
+        int i=0;
+
+        System.out.println("Bienvenue dans le jeu !");
         sc = new Scanner(System.in);
-        System.out.println("Choisir votre personnage :\n1 pour Guerrier \n2 pour Magicien");
+        System.out.println("Voulez-vous créer un personnage ? :\nO pour Yes\nN pour Non");
         String str = sc.nextLine();
-        // System.out.println("Vous avez saisi : " + str); 
+        if (str.equals("O")) {
 
-        // Permet d'afficher le nom du personnage choisi
-        if (str.equals("1")) {
-            System.out.println("Vous avez choisi de créer un guerrier");
-            CreateWarrior();        
-        }
+            i++;
+            System.out.println("Choisir votre personnage :\n1 pour Guerrier \n2 pour Magicien");
+            str = sc.nextLine();
+            System.out.println("Vous avez saisi : " + str); 
 
-        if (str.equals("2")) {
-            System.out.println("Vous avez choisi de créer un magicien");
-            CreateMagic();
+            // Permet d'afficher le nom du personnage choisi
+            if (str.equals("1")) {
+                System.out.println("Vous avez choisi de créer un guerrier");
+                CreateWarrior();        
+            }
+
+            if (str.equals("2")) {
+                System.out.println("Vous avez choisi de créer un magicien");
+                CreateMagic();
+            }
         }
+        else {
+            System.out.println("A bientôt !");
+        }
+        
 
     } 
+
+    // METHODES
      
     //Methode pour créer un guerrier
     public static void CreateWarrior()
