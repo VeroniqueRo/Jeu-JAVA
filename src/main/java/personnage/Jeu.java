@@ -10,30 +10,44 @@ public class Jeu {
 
     public static void main(String[] args) {
 
-        Boolean creation = true;
+        Boolean reponse = true;
         int i=0;
 
         System.out.println("Bienvenue dans le jeu !");
         sc = new Scanner(System.in);
-        System.out.println("Voulez-vous créer un personnage ? :\nO pour Yes\nN pour Non");
+        System.out.println("Voulez-vous créer un personnage ? :\nO pour Oui\nN pour Non");
         String str = sc.nextLine();
         if (str.equals("O")) {
 
-            i++;
-            System.out.println("Choisir votre personnage :\n1 pour Guerrier \n2 pour Magicien");
-            str = sc.nextLine();
-            System.out.println("Vous avez saisi : " + str); 
+            do {
+                i++;
+                System.out.println("Quel personnage souhaitez-vous creér :\n1 pour Guerrier \n2 pour Magicien");
+                str = sc.nextLine();
 
-            // Permet d'afficher le nom du personnage choisi
-            if (str.equals("1")) {
-                System.out.println("Vous avez choisi de créer un guerrier");
-                CreateWarrior();        
-            }
+                if (str.equals("1")) {
+                    System.out.println("Vous avez choisi de créer un guerrier");
+                    CreateWarrior();        
+                }
 
-            if (str.equals("2")) {
-                System.out.println("Vous avez choisi de créer un magicien");
-                CreateMagic();
-            }
+                if (str.equals("2")) {
+                    System.out.println("Vous avez choisi de créer un magicien");
+                    CreateMagic();
+                }
+
+                System.out.println("Souhaitez-vous creér un autre personnage ?\nO pour Yes\nN pour Non");
+                str = sc.nextLine();
+                
+                if (str.equals("O")) {
+                    reponse = true;
+                } else {
+                    reponse = false;
+                }
+
+            } while (reponse == true);
+
+            System.out.println("Vous avez créé "+ i + " personnages");
+            System.out.println("Que voulez-vous faire ?");
+             
         }
         else {
             System.out.println("A bientôt !");
@@ -79,8 +93,11 @@ public class Jeu {
           guerrier1.setBouclier(Saisie.creationBouclier()); // Appelle la méthode dans la classe Saisie pour attribuer un bouclier au nouveau personnage créé
           
           //Affiche le nom du personnage créé avec le message "personnage créé"
+          System.out.println("***********************************************");
           System.out.println("Votre guerrier "+ guerrier1.getNom() + " est créé");
+          System.out.println("***********************************************");
           System.out.println(guerrier1);
+          System.out.println("***********************************************");
     }
 
     //Methode pour créer un magicien
