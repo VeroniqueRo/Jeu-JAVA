@@ -115,23 +115,31 @@ public class Jeu {
                 persoAModifier.setForceAttaque(selectAttributInt("Force d'attaque actuelle : "+ persoAModifier.getForceAttaque() + "\nSaisissez la nouvelle force d'attaque"));
                 sc.nextLine();
                 break;
-//            case "5":
-//                persoAModifier.setArme(selectAttribut("Quel nom souhaitez-vous donner à votre personnage ?"));
-//                break;
-//            case "6":
-//                persoAModifier.setBouclier(selectAttributInt("Quelle nouvelle force souhaitez-vous donner à votre bouclier ?"));
-//                sc.nextLine();
-//                break;
+            case "5":
+                if (persoAModifier instanceof Guerrier) {
+                    Guerrier guerrier = (Guerrier)persoAModifier;
+                    guerrier.setArme(selectAttribut("Arme actuelle : "+ guerrier.getArme() + "\nSaisissez la nouvelle arme"));
+                }
+                else if (persoAModifier instanceof Magicien) {
+                    Magicien magicien = (Magicien)persoAModifier;
+                    magicien.setSort(selectAttribut("Sort actuel : "+ magicien.getSort() + "\nSaisissez le nouveau sort"));
+                }
+                break;
+           case "6":
+               if (persoAModifier instanceof Guerrier) {
+                   Guerrier guerrier = (Guerrier)persoAModifier;
+                   guerrier.setBouclier(selectAttributInt("Puissance actuelle du bouclier : "+ guerrier.getBouclier() + "\nSaisissez la nouvelle puissance"));
+               }
+               else if (persoAModifier instanceof Magicien) {
+                   Magicien magicien = (Magicien) persoAModifier;
+                   magicien.setPhiltre(selectAttributInt("Puissance actuelle du philtre  : " + magicien.getPhiltre() + "\nSaisissez la nouvelle puissance"));
+               }
+               break;
             default:
                 System.out.println("Erreur de saisie");
         }
         System.out.println(persoAModifier);
         System.out.println("**********************************");
-
-//        System.out.println("Nouveau nom pour : " + personnages[choixModif].getNom());
-//        newNom = sc.nextLine();
-//        personnages[choixModif].setNom(newNom);
-//        System.out.println("Nouveau nom " + personnages[choixModif].getNom());
 
     }
 
@@ -142,7 +150,7 @@ public class Jeu {
     }
 
     //Méthode pour demander de choisir une valeur, la stocker et la retourner
-    public static Integer selectAttributInt(String message) {
+    public static int selectAttributInt(String message) {
         System.out.println(message);
         return sc.nextInt();
     }

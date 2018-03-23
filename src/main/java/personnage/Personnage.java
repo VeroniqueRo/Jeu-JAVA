@@ -8,7 +8,7 @@ public abstract class Personnage
     protected int niveauVie;
     protected int forceAttaque;
 
-       //*************   ACCESSEURS *************
+    //*************   ACCESSEURS *************
 
     // Retourne le nom du guerrier
     public String getNom() {
