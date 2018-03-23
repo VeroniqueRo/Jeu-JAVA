@@ -34,7 +34,7 @@ public class Magicien extends Personnage
     // Méthode toString : Affiche les informations d'un objet
     public String toString()
     {
-        return super.toString() + "\nSort : " + sort + "\nPhiltre : " + philtre;
+        return super.toString() + "\n5.Sort : " + sort + "\n6.Philtre : " + philtre;
     }
 
 }

@@ -9,9 +9,9 @@ public class Jeu {
     private static int nbPerso = 0;
 
     public static void main(String[] args) {
-        Boolean reponse = true;
-        int i = 0;
-        String choixPerso;
+//        Boolean reponse = true;
+//        int i = 0;
+//        String choixPerso;
 
         System.out.println("Bienvenue dans le jeu !");
         sc = new Scanner(System.in);
@@ -23,6 +23,7 @@ public class Jeu {
             System.out.println("2. Afficher tous les personnages");
             System.out.println("3. Modifier un personnages");
             System.out.println("4. Quitter");
+            System.out.println("****************************");
 
             choix = sc.nextInt();
             sc.nextLine();
@@ -46,26 +47,27 @@ public class Jeu {
                 default:
                     System.out.println("Erreur de saisie");
             }
-            System.out.println("A bientôt !");
 
         } while (choix != 4);
+
+        System.out.println("A bientôt !");
 
 
     }
 
     // METHODES
     // Affichage du tableau des personnages
-    public static void affichePersos()
-    {
-        for (int i = 0; i < nbPerso; i++)
-        {
+    public static void affichePersos() {
+        System.out.println("Vous avez créé " + nbPerso + " personnages");
+        System.out.println("****************************");
+        for (int i = 0; i < nbPerso; i++) {
             System.out.println(personnages[i]);
+            System.out.println("****************************");
         }
     }
 
     // Création des personnages
-    public static void createPerso()
-    {
+    public static void createPerso() {
         String choixPerso;
         System.out.println("Quel personnage souhaitez-vous creér :\n1 pour Guerrier \n2 pour Magicien");
         choixPerso = sc.nextLine();
@@ -82,30 +84,67 @@ public class Jeu {
     }
 
     // Modification des personnages
-    public static void modifPersos(){
+    public static void modifPersos() {
 
         int choixModif;
         String newNom;
 
         System.out.println("Quel personnage souhaitez-vous modifier ?");
-        for (int i = 0; i < nbPerso; i++)
-        {
-            System.out.println("\n" + i + ". "+ personnages[i].getNom());
+        for (int i = 0; i < nbPerso; i++) {
+            System.out.println(i + ". " + personnages[i].getNom());
         }
         choixModif = sc.nextInt();
+        //Stocker dans une variable le perso à modifier
+        Personnage persoAModifier = personnages[choixModif];
         sc.nextLine();
+        System.out.println("Que voulez-vous modifier ?");
         System.out.println(personnages[choixModif]);
-        System.out.println("Nouveau nom pour : "+ personnages[choixModif].getNom());
-        newNom = sc.nextLine();
-        personnages[choixModif].setNom(newNom);
-        System.out.println("Nouveau nom "+ personnages[choixModif].getNom());
+        String userChoice = sc.nextLine();
+        switch (userChoice) {
+            case "1":
+                persoAModifier.setNom(selectAttribut("Nom actuel : "+ persoAModifier.getNom() + "\nSaisissez le nouveau nom"));
+                break;
+            case "2":
+                persoAModifier.setImage(selectAttribut("Image actuelle : "+ persoAModifier.getImage() + "\nSaisissez la nouvelle image"));
+                break;
+            case "3":
+                persoAModifier.setNiveauVie(selectAttributInt("Niveau de vie actuel : "+ persoAModifier.getNiveauVie() + "\nSaisissez le nouveau niveau de vie"));
+                sc.nextLine();
+                break;
+            case "4":
+                persoAModifier.setForceAttaque(selectAttributInt("Force d'attaque actuelle : "+ persoAModifier.getForceAttaque() + "\nSaisissez la nouvelle force d'attaque"));
+                sc.nextLine();
+                break;
+//            case "5":
+//                persoAModifier.setArme(selectAttribut("Quel nom souhaitez-vous donner à votre personnage ?"));
+//                break;
+//            case "6":
+//                persoAModifier.setBouclier(selectAttributInt("Quelle nouvelle force souhaitez-vous donner à votre bouclier ?"));
+//                sc.nextLine();
+//                break;
+            default:
+                System.out.println("Erreur de saisie");
+        }
+        System.out.println(persoAModifier);
+        System.out.println("**********************************");
+
+//        System.out.println("Nouveau nom pour : " + personnages[choixModif].getNom());
+//        newNom = sc.nextLine();
+//        personnages[choixModif].setNom(newNom);
+//        System.out.println("Nouveau nom " + personnages[choixModif].getNom());
 
     }
 
-    //Méthode pour demander de choisir une valeur à l'attribut et la retourne
-    public static String selectAttribut (String message){
+    //Méthode pour demander de choisir une valeur, la stocker et la retourner
+    public static String selectAttribut(String message) {
         System.out.println(message);
         return sc.nextLine();
+    }
+
+    //Méthode pour demander de choisir une valeur, la stocker et la retourner
+    public static Integer selectAttributInt(String message) {
+        System.out.println(message);
+        return sc.nextInt();
     }
 
     // Methode pour créer un guerrier
