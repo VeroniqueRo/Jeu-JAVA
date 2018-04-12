@@ -1,5 +1,8 @@
 package personnage;
 
+/**
+ * The type Magicien.
+ */
 public class Magicien extends Personnage
 
 {
@@ -11,21 +14,41 @@ public class Magicien extends Personnage
 
 //*************   ACCESSEURS *************
 
+    /**
+     * Gets sort.
+     *
+     * @return the sort
+     */
     public String getSort() {
         return sort;
     }
 
+    /**
+     * Gets philtre.
+     *
+     * @return the philtre
+     */
     public int getPhiltre() {
         return philtre;
     }
 
     //*************   MUTATEURS *************
 
+    /**
+     * Sets sort.
+     *
+     * @param pSort the p sort
+     */
     public void setSort(String pSort)
     {
         this.sort = pSort;
     }
 
+    /**
+     * Sets philtre.
+     *
+     * @param pPhiltre the p philtre
+     */
     public void setPhiltre(int pPhiltre)
     {
         this.philtre = pPhiltre;

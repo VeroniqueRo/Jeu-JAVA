@@ -2,12 +2,20 @@ package personnage;
 
 import java.util.Scanner;
 
+/**
+ * The type Jeu.
+ */
 public class Jeu {
 
     private static Scanner sc;
     private static Personnage personnages[] = new Personnage[10]; //Tableau contenant les personnages, tableau d'objets Personnage
     private static int nbPerso = 0;
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
 //        Boolean reponse = true;
 //        int i = 0;
@@ -22,7 +30,8 @@ public class Jeu {
             System.out.println("1. Créer un personnage ? ");
             System.out.println("2. Afficher tous les personnages");
             System.out.println("3. Modifier un personnages");
-            System.out.println("4. Quitter");
+//            System.out.println("4. Attaquer");
+            System.out.println("5. Quitter");
             System.out.println("****************************");
 
             choix = sc.nextInt();
@@ -42,20 +51,27 @@ public class Jeu {
                     break;
 
                 case 4:
+//                    attaquer();
+                    break;
+
+                case 5:
                     break;
 
                 default:
                     System.out.println("Erreur de saisie");
             }
 
-        } while (choix != 4);
+        } while (choix != 5);
 
         System.out.println("A bientôt !");
 
 
     }
 
-    // METHODES
+    /**
+     * Affiche persos.
+     */
+// METHODES
     // Affichage du tableau des personnages
     public static void affichePersos() {
         System.out.println("Vous avez créé " + nbPerso + " personnages");
@@ -66,7 +82,10 @@ public class Jeu {
         }
     }
 
-    // Création des personnages
+    /**
+     * Create perso.
+     */
+// Création des personnages
     public static void createPerso() {
         String choixPerso;
         System.out.println("Quel personnage souhaitez-vous creér :\n1 pour Guerrier \n2 pour Magicien");
@@ -83,7 +102,10 @@ public class Jeu {
         }
     }
 
-    // Modification des personnages
+    /**
+     * Modif persos.
+     */
+// Modification des personnages
     public static void modifPersos() {
 
         int choixModif;
@@ -143,19 +165,34 @@ public class Jeu {
 
     }
 
-    //Méthode pour demander de choisir une valeur, la stocker et la retourner
+    /**
+     * Select attribut string.
+     *
+     * @param message the message
+     * @return the string
+     */
+//Méthode pour demander de choisir une valeur, la stocker et la retourner
     public static String selectAttribut(String message) {
         System.out.println(message);
         return sc.nextLine();
     }
 
-    //Méthode pour demander de choisir une valeur, la stocker et la retourner
+    /**
+     * Select attribut int int.
+     *
+     * @param message the message
+     * @return the int
+     */
+//Méthode pour demander de choisir une valeur, la stocker et la retourner
     public static int selectAttributInt(String message) {
         System.out.println(message);
         return sc.nextInt();
     }
 
-    // Methode pour créer un guerrier
+    /**
+     * Create warrior.
+     */
+// Methode pour créer un guerrier
     public static void createWarrior() {
         //Création du personnage
         Guerrier guerrier1 = new Guerrier();
@@ -187,7 +224,10 @@ public class Jeu {
         System.out.println("***********************************************");
     }
 
-    //Methode pour créer un magicien
+    /**
+     * Create magic.
+     */
+//Methode pour créer un magicien
     public static void createMagic() {
         //Création du personnage
         Magicien magicien1 = new Magicien();

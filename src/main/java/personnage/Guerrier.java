@@ -1,5 +1,8 @@
 package personnage;
 
+/**
+ * The type Guerrier.
+ */
 public class Guerrier extends Personnage
 
 {
@@ -8,20 +11,40 @@ public class Guerrier extends Personnage
 
     //*************   ACCESSEURS *************
 
+    /**
+     * Gets arme.
+     *
+     * @return arme
+     */
     public String getArme() {
         return arme;
     }
 
+    /**
+     * Gets bouclier.
+     *
+     * @return the bouclier
+     */
     public int getBouclier() {
         return bouclier;
     }
 
     //*************   MUTATEURS *************
 
+    /**
+     * Sets arme.
+     *
+     * @param pArme the p arme
+     */
     public void setArme(String pArme) {
         this.arme = pArme;
     }
 
+    /**
+     * Sets bouclier.
+     *
+     * @param pBouclier the p bouclier
+     */
     public void setBouclier(int pBouclier) {
         this.bouclier = pBouclier;
     }

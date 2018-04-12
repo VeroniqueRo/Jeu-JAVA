@@ -2,13 +2,21 @@ package personnage;
 
 import java.util.Scanner;
 
+/**
+ * The type Saisie.
+ */
 public class Saisie {
 
     private static Scanner sc = new Scanner(System.in);
 
 // METHODES POUR TOUS LES PERSONNAGES
 
-    //************************ Méthode pour donner un nom au personnage ****************************************
+    /**
+     * Creation nom string.
+     *
+     * @return the string
+     */
+//************************ Méthode pour donner un nom au personnage ****************************************
     public static String creationNom() {
 
         String nomPerso = sc.nextLine();
@@ -20,7 +28,12 @@ public class Saisie {
         return nomPerso;
     }
 
-    //************************ Méthode pour donner une image au personnage ****************************************
+    /**
+     * Creation image string.
+     *
+     * @return the string
+     */
+//************************ Méthode pour donner une image au personnage ****************************************
     public static String creationImage() {
 
         String nomImage = sc.nextLine();
@@ -33,7 +46,12 @@ public class Saisie {
         return nomImage;
     }
 
-    //************************ Donner un niveau de vie au personnage ****************************************
+    /**
+     * Creation niveau vie integer.
+     *
+     * @return the integer
+     */
+//************************ Donner un niveau de vie au personnage ****************************************
     public static Integer creationNiveauVie() {
 
         int nomNiveauVie = sc.nextInt();
@@ -48,7 +66,12 @@ public class Saisie {
         return nomNiveauVie;
     }
 
-    //************************ Donner une force d'attaque au personnage ****************************************
+    /**
+     * Creation force attaque integer.
+     *
+     * @return the integer
+     */
+//************************ Donner une force d'attaque au personnage ****************************************
     public static Integer creationForceAttaque() {
 
         int nomForceAttaque = sc.nextInt();
@@ -65,7 +88,12 @@ public class Saisie {
 
 // METHODES SPECIALES POUR LES GUERRIERS
 
-    //************************ Méthode pour donner une arme au personnage ****************************************
+    /**
+     * Creation arme string.
+     *
+     * @return the string
+     */
+//************************ Méthode pour donner une arme au personnage ****************************************
     public static String creationArme() {
 
         String nomArme = sc.nextLine();
@@ -78,7 +106,12 @@ public class Saisie {
         return nomArme;
     }
 
-    //************************ Donner un bouclier au personnage ****************************************
+    /**
+     * Creation bouclier integer.
+     *
+     * @return the integer
+     */
+//************************ Donner un bouclier au personnage ****************************************
     public static Integer creationBouclier() {
 
         int nomBouclier = sc.nextInt();
@@ -95,7 +128,12 @@ public class Saisie {
 
     // METHODES SPECIALES POUR LES MAGICIENS
 
-    //************************ Méthode pour donner un sort au personnage ****************************************
+    /**
+     * Creation sort string.
+     *
+     * @return the string
+     */
+//************************ Méthode pour donner un sort au personnage ****************************************
     public static String creationSort() {
 
         String nomSort = sc.nextLine();
@@ -108,7 +146,12 @@ public class Saisie {
         return nomSort;
     }
 
-    //************************ Donner un philtre au personnage ****************************************
+    /**
+     * Creation philtre integer.
+     *
+     * @return the integer
+     */
+//************************ Donner un philtre au personnage ****************************************
     public static Integer creationPhiltre() {
 
         int philtreMage = sc.nextInt();
