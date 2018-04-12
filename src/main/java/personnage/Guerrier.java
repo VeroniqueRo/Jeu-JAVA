@@ -14,7 +14,7 @@ public class Guerrier extends Personnage
     /**
      * Gets arme.
      *
-     * @return arme
+     * @return the arme
      */
     public String getArme() {
         return arme;

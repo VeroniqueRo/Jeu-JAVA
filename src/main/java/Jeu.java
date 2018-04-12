@@ -2,6 +2,7 @@ package personnage;
 
 import java.util.Scanner;
 
+
 /**
  * The type Jeu.
  */
@@ -32,6 +33,7 @@ public class Jeu {
             System.out.println("3. Modifier un personnages");
 //            System.out.println("4. Attaquer");
             System.out.println("5. Quitter");
+            System.out.println("6. Tableau");
             System.out.println("****************************");
 
             choix = sc.nextInt();
@@ -51,10 +53,14 @@ public class Jeu {
                     break;
 
                 case 4:
-//                    attaquer();
+//                   attaquer();
                     break;
 
                 case 5:
+                    break;
+
+                case 6:
+                    afficheTableau();
                     break;
 
                 default:
@@ -259,4 +265,11 @@ public class Jeu {
         System.out.println("***********************************************");
     }
 
+    /**
+     * Affiche tableau.
+     */
+    public static void afficheTableau() {
+
+    }
 }
+
