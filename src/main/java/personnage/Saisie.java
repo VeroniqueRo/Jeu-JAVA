@@ -9,7 +9,16 @@ public class Saisie {
 
     private static Scanner sc = new Scanner(System.in);
 
-// METHODES POUR TOUS LES PERSONNAGES
+//    public Saisie(String saisie)
+//
+//        throws ChampVideException
+//        {
+//            if (saisie.equals(""))
+//            throw new ChampVideException();
+//        }
+
+
+        // METHODES POUR TOUS LES PERSONNAGES
 
     /**
      * Creation nom string.
@@ -17,13 +26,15 @@ public class Saisie {
      * @return the string
      */
 //************************ Méthode pour donner un nom au personnage ****************************************
-    public static String creationNom() {
+    // Gestion de la non-saisie du champ par lé génération d'une exception qui lui donne un nom par défaut
+    public static String creationNom() throws ChampVideException{
 
         String nomPerso = sc.nextLine();
-        // Condition : Pour forcer à entrer au moins un caractère
-        while (nomPerso.equals("")) {
-            System.out.println("Le nom est indispensable.\nQuel nom souhaitez-vous donner à votre personnage ?");
-            nomPerso = sc.nextLine();
+        {
+                while(nomPerso.equals(""))
+                {
+                    throw new ChampVideException();
+                }
         }
         return nomPerso;
     }

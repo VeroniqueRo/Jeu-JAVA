@@ -24,7 +24,7 @@ public class Jeu {
 
         System.out.println("Bienvenue dans le jeu !");
         sc = new Scanner(System.in);
-        int choix;
+        int choix=0;
 
         do {
             System.out.println("Que voulez-vous faire ? ");
@@ -33,10 +33,12 @@ public class Jeu {
             System.out.println("3. Modifier un personnages");
 //            System.out.println("4. Attaquer");
             System.out.println("5. Quitter");
-            System.out.println("6. Tableau");
             System.out.println("****************************");
-
-            choix = sc.nextInt();
+            try {
+                choix = sc.nextInt();
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("Erreur de saisie : Saisissez un chiffre de 1 à 5");
+            }
             sc.nextLine();
 
             switch (choix) {
@@ -59,12 +61,8 @@ public class Jeu {
                 case 5:
                     break;
 
-                case 6:
-                    afficheTableau();
-                    break;
-
                 default:
-                    System.out.println("Erreur de saisie");
+//                    System.out.println("Erreur de saisie");
             }
 
         } while (choix != 5);
@@ -206,10 +204,19 @@ public class Jeu {
         personnages[nbPerso] = guerrier1;
         //Incrémente le nombre de personnage dans le tableau
         nbPerso++;
-        //************************ Donner un nom au personnage ****************************************
-        System.out.println("Donnez-lui un nom ?");
-        guerrier1.setNom(Saisie.creationNom()); // Appelle la méthode dans la classe Saisie pour attribuer le nom donné par l'utilisateur au Guerrier créée
-        //************************ Donner une image au personnage ****************************************
+        try {
+            //************************ Donner un nom au personnage ****************************************
+            System.out.println("Donnez-lui un nom ?");
+            guerrier1.setNom(Saisie.creationNom());
+           // Appelle la méthode dans la classe Saisie pour attribuer le nom donné par l'utilisateur au Guerrier créée
+        }
+        catch (ChampVideException e)
+        {
+            guerrier1.setNom("John Doe");
+        }
+
+
+            //************************ Donner une image au personnage ****************************************
         System.out.println("Quelle image souhaitez-vous ?");
         guerrier1.setImage(Saisie.creationImage());// Appelle la méthode dans la classe Saisie pour attribuer une image donnée par l'utilisateur au Guerrier créé
         //************************ Donner une arme au personnage ****************************************
@@ -241,9 +248,17 @@ public class Jeu {
         personnages[nbPerso] = magicien1;
         //Incrémente le nombre de personnage dans le tableau
         nbPerso++;
-        //************************ Donner un nom au personnage ****************************************
-        System.out.println("Donnez-lui un nom ?");
-        magicien1.setNom(Saisie.creationNom()); // Attribuer le nom donné par l'utilisateur au magicien créé
+        // Test pour savoir si il faut générer une exception
+        try {
+            //************************ Donner un nom au personnage ****************************************
+            System.out.println("Donnez-lui un nom ?");
+            magicien1.setNom(Saisie.creationNom());
+
+        }
+        catch (ChampVideException e) {
+            // Attribue un nom par défaut au magicien créé
+            magicien1.setNom("Merlin l'enchanteur");
+        }
         //************************ Donner une image au personnage ****************************************
         System.out.println("Quelle image souhaitez-vous ?");
         magicien1.setImage(Saisie.creationImage()); // Attribuer une image donnée par l'utilisateur au magicien créé

@@ -10,27 +10,6 @@ public class Magicien extends Personnage
     private String sort;
     private int philtre;
 
-    /**
-     * Get tab string [ ].
-     *
-     * @return the string [ ]
-     */
-    public String[] getTab() {
-        return tab;
-    }
-
-    /**
-     * Sets tab.
-     *
-     * @param tab the tab
-     */
-    public void setTab(String[] tab) {
-        this.tab = tab;
-    }
-
-
-
-
 
 //*************   ACCESSEURS *************
 
