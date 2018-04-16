@@ -23,6 +23,7 @@ public class Jeu {
 //        String choixPerso;
 
         System.out.println("Bienvenue dans le jeu !");
+        System.out.p
         sc = new Scanner(System.in);
         int choix=0;
 
@@ -215,7 +216,6 @@ public class Jeu {
             guerrier1.setNom("John Doe");
         }
 
-
             //************************ Donner une image au personnage ****************************************
         System.out.println("Quelle image souhaitez-vous ?");
         guerrier1.setImage(Saisie.creationImage());// Appelle la méthode dans la classe Saisie pour attribuer une image donnée par l'utilisateur au Guerrier créé
@@ -253,7 +253,6 @@ public class Jeu {
             //************************ Donner un nom au personnage ****************************************
             System.out.println("Donnez-lui un nom ?");
             magicien1.setNom(Saisie.creationNom());
-
         }
         catch (ChampVideException e) {
             // Attribue un nom par défaut au magicien créé
