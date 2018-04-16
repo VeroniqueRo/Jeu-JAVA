@@ -35,6 +35,7 @@ public class Jeu {
 //            System.out.println("4. Attaquer");
             System.out.println("5. Quitter");
             System.out.println("****************************");
+            // Gestion d'une exception simple : Si la saisie n'est pas un "integer"
             try {
                 choix = sc.nextInt();
             } catch (java.util.InputMismatchException e) {

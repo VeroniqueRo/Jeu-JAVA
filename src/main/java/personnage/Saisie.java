@@ -26,7 +26,7 @@ public class Saisie {
      * @return the string
      */
 //************************ Méthode pour donner un nom au personnage ****************************************
-    // Gestion de la non-saisie du champ par lé génération d'une exception qui lui donne un nom par défaut
+    // Gestion de la non-saisie du champ par la génération d'une exception qui lui donne un nom par défaut
     public static String creationNom() throws ChampVideException{
 
         String nomPerso = sc.nextLine();
